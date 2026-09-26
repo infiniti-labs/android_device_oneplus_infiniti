@@ -2,6 +2,9 @@
 ro.product.odm.device=OP60FFL1
 ro.product.odm.model=PLK110
 ro.product.odm.name=PLK110
+ro.product.device_for_attestation=OP60FFL1
+ro.product.model_for_attestation=PLK110
+ro.product.name_for_attestation=PLK110
 ro.vendor.oplus.regionmark=CN
 
 # NFC
