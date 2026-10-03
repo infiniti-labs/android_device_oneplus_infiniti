@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Stock panel masks use 260x260 native-pixel canvases in drawable-nodpi.
+         SystemUI handles display rotation and resolution scaling. -->
+    <bool name="config_usePhysicalPanelMasks">true</bool>
+</resources>
