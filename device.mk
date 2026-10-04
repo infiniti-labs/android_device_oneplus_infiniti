@@ -79,6 +79,17 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
 $(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.oplus.infiniti)
 
+# VibratorExt
+PRODUCT_PACKAGES += \
+    vendor.sun.hardware.vibratorExt-service.oplus
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/haptics/vibration_effect_map.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/vibration_effect_map.xml
+
+# Vintf
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/vintf/framework_compatibility_matrix.xml
+
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8850-common/common.mk)
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022-2024 Nameless-AOSP
+     SPDX-License-Identifier: Apache-2.0
+-->
+<filter-conf>
+
+    <info version="2" timestamp="1712851133"/>
+
+    <!-- Gboard -->
+    <inputmethodEnhance package="com.google.android.inputmethod.latin" max="101" />
+    <!-- Google 拼音 -->
+    <inputmethodEnhance package="com.google.android.inputmethod.pinyin" max="101" />
+    <!-- 讯飞输入法 -->
+    <inputmethodEnhance package="com.iflytek.inputmethod" max="50" />
+    <!-- 讯飞输入法小米定制版 -->
+    <inputmethodEnhance package="com.iflytek.inputmethod.xiaomi" max="50" />
+    <!-- 搜狗输入法 -->
+    <inputmethodEnhance package="com.sohu.inputmethod.sogou" max="50" />
+    <!-- 搜狗输入法小米定制版 -->
+    <inputmethodEnhance package="com.sohu.inputmethod.sogou.xiaomi" max="50" />
+    <!-- 搜狗输入法魅族定制版 -->
+    <inputmethodEnhance package="com.sohu.inputmethod.sogou.meizu" max="50" />
+    <!-- 百度输入法 -->
+    <inputmethodEnhance package="com.baidu.input" max="100" />
+    <!-- 百度输入法小米定制版 -->
+    <inputmethodEnhance package="com.baidu.input_mi" max="40" />
+    <!-- 百度输入法一加定制版 -->
+    <inputmethodEnhance package="com.baidu.input_yijia" max="50" />
+    <!-- QQ 输入法 -->
+    <inputmethodEnhance package="com.tencent.qqpinyin" max="75" />
+    <!-- 手心输入法 -->
+    <inputmethodEnhance package="com.xinshuru.inputmethod" max="48" />
+    <!-- SwiftKey -->
+    <inputmethodEnhance package="com.touchtype.swiftkey" max="100" />
+    <!-- SwiftKey Beta -->
+    <inputmethodEnhance package="com.touchtype.swiftkey.beta" max="100" />
+    <!-- 微信键盘 -->
+    <inputmethodEnhance package="com.tencent.wetype" max="40" />
+    <!-- 同文输入法 -->
+    <inputmethodEnhance package="com.osfans.trime" max="100" />
+    <!-- 小鹤音形 -->
+    <inputmethodEnhance package="com.flypy.xh" max="100" />
+
+    <!-- Google Calculator -->
+    <calculatorEnhance package="com.google.android.calculator" />
+    <!-- MIUI Calculator -->
+    <calculatorEnhance package="com.miui.calculator" />
+
+    <!-- Telegram 设置开关 -->
+    <durationToEffect package="org.telegram.messenger" duration="100" effectId="4" />
+    <durationToEffect package="org.telegram.messenger.web" duration="100" effectId="4" />
+    <!-- Telegram 错误 -->
+    <durationToEffect package="org.telegram.messenger" duration="365" effectId="2020" />
+    <durationToEffect package="org.telegram.messenger.web" duration="365" effectId="2020" />
+    <!-- 迅雷长按快进 -->
+    <durationToEffect package="com.xunlei.downloadprovider" duration="200" effectId="5" />
+    <!-- 哔哩哔哩长按快进 -->
+    <durationToEffect package="tv.danmaku.bili" duration="30" effectId="5" />
+    <!-- QQ 下拉小程序 -->
+    <durationToEffect package="com.tencent.mobileqq" duration="10" effectId="0" />
+    <!-- 微信下拉小程序 -->
+    <durationToEffect package="com.tencent.mm" duration="10" effectId="0" />
+    <!-- QQ 消息左滑 -->
+    <durationToEffect package="com.tencent.mobileqq" duration="100" effectId="5" />
+    <!-- TIM 消息左滑 -->
+    <durationToEffect package="com.tencent.tim" duration="100" effectId="5" />
+    <!-- QQ 头像长按 -->
+    <durationToEffect package="com.tencent.mobileqq" duration="42" effectId="5" />
+    <!-- QQ 语音接通 -->
+    <durationToEffect package="com.tencent.mobileqq" duration="200" effectId="1" />
+    <!-- TIM 语音接通 -->
+    <durationToEffect package="com.tencent.tim" duration="200" effectId="1" />
+    <!-- 微信语音接通 (暂时移除：与消息通知振动冲突)
+    <durationToEffect package="com.tencent.mm" duration="1000" effectId="1" -->
+    <!-- MT Manager (滑动选取、终端按键) -->
+    <durationToEffect package="bin.mt.plus" duration="10" effectId="5" />
+    <!-- MT Manager (二次滑动选取) -->
+    <durationToEffect package="bin.mt.plus" duration="140" effectId="5" />
+    <!-- Google 语音输入 -->
+    <durationToEffect package="com.google.android.googlequicksearchbox" duration="100" effectId="0" />
+    <!-- QQ 音乐按钮点击振动 -->
+    <durationToEffect package="com.tencent.qqmusic" duration="100" effectId="0" />
+
+    <!-- Waltz -->
+    <ringtoneDuration effectId="500" duration="2729" />
+    <!-- Cut -->
+    <ringtoneDuration effectId="501" duration="2081" />
+    <!-- Clock -->
+    <ringtoneDuration effectId="502" duration="3968" />
+    <!-- Short -->
+    <ringtoneDuration effectId="503" duration="4516" />
+
+</filter-conf>
