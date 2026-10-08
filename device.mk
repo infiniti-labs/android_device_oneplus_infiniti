@@ -49,6 +49,8 @@ PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.oplus
 
 ifeq ($(TARGET_ENABLE_GBL),true)
+include external/gbl/product.mk
+# Integrity
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.pihooks.disable.gms_key_attestation_block=true
 endif
