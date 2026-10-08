@@ -63,11 +63,16 @@ PRODUCT_PACKAGES += \
 # Recovery
 $(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
 
+ifeq ($(TARGET_ENABLE_GBL),true)
+include external/gbl/product.mk
+endif
+
 # Regional properties
 REGIONAL_PROP_FILES := $(wildcard $(DEVICE_PATH)/properties/*/*.prop)
 
 PRODUCT_COPY_FILES += $(foreach f,$(REGIONAL_PROP_FILES), \
     $(f):$(TARGET_COPY_OUT_ODM)/etc/$(patsubst $(DEVICE_PATH)/properties/%,%,$(f)) \
+    $(f):$(TARGET_COPY_OUT_PRODUCT)/etc/infiniti/$(patsubst $(DEVICE_PATH)/properties/%,%,$(f)) \
     $(f):$(TARGET_COPY_OUT_RECOVERY)/root/vendor/odm/etc/$(patsubst $(DEVICE_PATH)/properties/%,%,$(f)))
 
 # Soong namespaces
