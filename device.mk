@@ -48,6 +48,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.oplus
 
+ifeq ($(TARGET_ENABLE_GBL),true)
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.pihooks.disable.gms_key_attestation_block=true
+endif
+
 # Regional properties
 REGIONAL_PROP_FILES := $(wildcard $(DEVICE_PATH)/properties/*/*.prop)
 
