@@ -11,6 +11,26 @@ include device/oneplus/sm8850-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/oneplus/infiniti
 
+BOOT_SECURITY_PATCH := 2026-10-01
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+
+# GBL
+ifeq ($(TARGET_ENABLE_GBL),true)
+TARGET_KERNEL_BAZEL_FLAGS += --defconfig_fragment=//vendor/oneplus/sm8850:arch/arm64/configs/infiniti.fragment
+TARGET_GBL_BOOTSTRAP_ABL := vendor/oneplus/infiniti/gbl/abl.img
+TARGET_GBL_SYSTEM_VERSION := 262144
+TARGET_GBL_SYSTEM_SPL := 2474
+TARGET_GBL_ROT_DIGEST := 44149b5df4f23466590b6e9888b75e618dbe07220a078efcca37ef6218e566c7
+TARGET_GBL_PUBKEY_DIGEST := 8d897f62492ea617f777bad41a5711ab621fcac1efc1865b890328ee8c3853bb
+TARGET_GBL_VERIFIED_BOOT_HASH := 09eaff3a5c9ee12c78eaa79c8aaa2b352d1e9d93170b626ff44659b444f305a4
+include external/gbl/BoardConfig.mk
+$(call soong_config_set,libinit,vendor_init_lib,//device/oneplus/infiniti:libinit_infiniti)
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
+
+# VBMeta
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS := --flags 0
+endif
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := OP60FFL1,OP611FL1
 
