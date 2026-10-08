@@ -1,0 +1,7 @@
+cc_library_static {
+    name: "libinit_infiniti",
+    recovery_available: true,
+    srcs: ["init_infiniti.cpp"],
+    whole_static_libs: ["//device/oneplus/sm8850-common:libinit_oplus"],
+    shared_libs: ["libbase"],
+}
