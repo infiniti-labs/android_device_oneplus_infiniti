@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_pifUpdateUrl" translatable="false">https://raw.githubusercontent.com/infiniti-labs/ota/main/certified_build_props.json</string>
+</resources>
