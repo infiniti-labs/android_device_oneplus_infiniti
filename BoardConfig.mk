@@ -13,6 +13,7 @@ DEVICE_PATH := device/oneplus/infiniti
 
 # GBL
 ifeq ($(TARGET_ENABLE_GBL),true)
+TARGET_KERNEL_BAZEL_FLAGS += --defconfig_fragment=//vendor/oneplus/sm8850:arch/arm64/configs/infiniti.fragment
 TARGET_GBL_BOOTSTRAP_ABL := vendor/oneplus/infiniti/gbl/abl.img
 TARGET_GBL_SYSTEM_VERSION := 262144
 TARGET_GBL_SYSTEM_SPL := 2473
