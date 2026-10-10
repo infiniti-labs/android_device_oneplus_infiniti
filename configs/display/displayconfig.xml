@@ -297,4 +297,10 @@
         <minimumHdrPercentOfScreenForHbm>0.1</minimumHdrPercentOfScreenForHbm>
         <allowInLowPowerMode>false</allowInLowPowerMode>
     </hdrBrightnessConfig>
+    <screenBrightnessRampFastDecrease>0.06</screenBrightnessRampFastDecrease>
+    <screenBrightnessRampFastIncrease>0.06</screenBrightnessRampFastIncrease>
+    <screenBrightnessRampSlowDecrease>0.04</screenBrightnessRampSlowDecrease>
+    <screenBrightnessRampSlowIncrease>0.04</screenBrightnessRampSlowIncrease>
+    <screenBrightnessRampIncreaseMaxMillis>3000</screenBrightnessRampIncreaseMaxMillis>
+    <screenBrightnessRampDecreaseMaxMillis>3000</screenBrightnessRampDecreaseMaxMillis>
 </displayConfiguration>
