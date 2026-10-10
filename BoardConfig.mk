@@ -23,7 +23,7 @@ TARGET_GBL_VERIFIED_BOOT_HASH := c92a400c1dd86869c0ba2e0e5e5faf839f9cad3ebe8cfb3
 include external/gbl/BoardConfig.mk
 
 # VBMeta
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS := --flags 1
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS := --flags 0
 endif
 
 # Assert
