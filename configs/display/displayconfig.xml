@@ -303,4 +303,6 @@
     <screenBrightnessRampSlowIncrease>0.05</screenBrightnessRampSlowIncrease>
     <screenBrightnessRampIncreaseMaxMillis>2000</screenBrightnessRampIncreaseMaxMillis>
     <screenBrightnessRampDecreaseMaxMillis>20000</screenBrightnessRampDecreaseMaxMillis>
+    <ambientLightHorizonLong>2000</ambientLightHorizonLong>
+    <ambientLightHorizonShort>500</ambientLightHorizonShort>
 </displayConfiguration>
