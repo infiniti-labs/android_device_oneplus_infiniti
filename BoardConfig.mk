@@ -17,7 +17,7 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 # GBL
 ifeq ($(TARGET_ENABLE_GBL),true)
 TARGET_KERNEL_BAZEL_FLAGS += --defconfig_fragment=//vendor/oneplus/sm8850:arch/arm64/configs/infiniti.fragment
-TARGET_GBL_BOOTSTRAP_ABL := vendor/oneplus/infiniti/gbl/abl.img
+TARGET_GBL_BOOTSTRAP_ABL := vendor/oneplus/infiniti/radio/abl.img
 TARGET_GBL_SYSTEM_VERSION := 262144
 TARGET_GBL_SYSTEM_SPL := 2474
 TARGET_GBL_ROT_DIGEST := 44149b5df4f23466590b6e9888b75e618dbe07220a078efcca37ef6218e566c7
