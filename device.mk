@@ -5,6 +5,14 @@
 
 DEVICE_PATH := device/oneplus/infiniti
 
+# Updater
+PRODUCT_PACKAGES += Updater
+ifneq ($(IS_OFFICIAL),true)
+PRODUCT_PRODUCT_PROPERTIES += net.pixelos.build_type=personal
+endif
+PRODUCT_COPY_FILES += \
+    vendor/custom/config/permissions/privapp-permissions-custom.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-custom.xml
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
