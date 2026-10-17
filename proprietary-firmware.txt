@@ -1,7 +1,8 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from OnePlus 15 (CPH2745_16.0.10.601(EX01)).
 
-abl.img;AB
+# Older GBL-compatible ABL, retained independently of the stock dump.
+abl.img;AB|a3d836c00e874688f47699c6b6f13e4331da6753
 aop.img;AB
 aop_config.img;AB
 bluetooth.img;AB
