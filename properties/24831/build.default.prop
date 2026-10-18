@@ -11,3 +11,6 @@ ro.product.name_for_attestation=PLK110
 
 # NFC
 persist.vendor.nfc.config_file_name=libnfc-mtp-SN220.conf_24831
+
+# Widevine
+vendor.wv.oemcrypto.debug.enable_prov40=false
