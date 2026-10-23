@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 15 (CPH2745_16.0.10.601(EX01)).
+## are from OnePlus 15 (CPH2745_17.0.0.102(EX01)).
 
 # Older GBL-compatible ABL, retained independently of the stock dump.
 abl.img;AB|a3d836c00e874688f47699c6b6f13e4331da6753
