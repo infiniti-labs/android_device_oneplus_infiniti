@@ -41,9 +41,6 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'odm/etc/init/vendor.oplus.hardware.cryptoeng@1.0-service_FDE.rc': blob_fixup()
-        # Stock embeds shell syntax for an unrelated SM6450-only action.
-        .regex_replace(r'    if \[ "\$\(getprop ro\.soc\.model\)" = "SM6450" \]; then\n(?:.*\n)*?    fi\n', ''),
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
         # Disable face detection AE behaviour
         .regex_replace(r'(enableSWfdForThirdCamUnit += )TRUE', r'\1FALSE')
