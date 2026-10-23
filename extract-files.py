@@ -27,6 +27,7 @@ from extract_utils.utils import (
     run_cmd,
 )
 from extract_utils_oplus import (
+    add_firmware_proprietary_file,
     add_generated_thermal_engine_config,
 )
 
@@ -172,9 +173,9 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-    add_firmware_proprietary_file=True,
 )
 
+add_firmware_proprietary_file(module)
 add_generated_thermal_engine_config(module)
 
 if __name__ == '__main__':

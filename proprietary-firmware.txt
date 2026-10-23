@@ -3,6 +3,9 @@
 
 # Older GBL-compatible ABL, retained independently of the stock dump.
 abl.img;AB|a3d836c00e874688f47699c6b6f13e4331da6753
+
+# Stock ABL chainloaded by GBL
+abl.img:abl_chainload.img;EXTRACT_ONLY;FILEGROUP=abl_chainload
 aop.img;AB
 aop_config.img;AB
 bluetooth.img;AB
