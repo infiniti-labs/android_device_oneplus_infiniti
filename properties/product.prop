@@ -1,12 +1,8 @@
-# Fingerprint fallback for missing or unknown project/region.
-ro.build.fingerprint=OnePlus/CPH2745IN/OP611FL1:17/CP2A.260605.016/B.R4T3.477a176-213f341-217bb39:user/release-keys
-ro.bootimage.build.fingerprint=OnePlus/CPH2745IN/OP611FL1:17/CP2A.260605.016/B.R4T3.477a176-213f341-217bb39:user/release-keys
-ro.product.build.fingerprint=OnePlus/CPH2745IN/OP611FL1:17/CP2A.260605.016/B.R4T3.477a176-213f341-217bb39:user/release-keys
-ro.system_ext.build.fingerprint=OnePlus/CPH2745IN/OP611FL1:17/CP2A.260605.016/B.R4T3.477a176-213f341-217bb39:user/release-keys
-ro.vendor.build.fingerprint=OnePlus/CPH2745IN/OP611FL1:17/CP2A.260605.016/B.R4T3.477a176-213f341-217bb39:user/release-keys
-ro.odm.build.fingerprint=OnePlus/CPH2745IN/OP611FL1:17/CP2A.260605.016/B.R4T3.477a176-213f341-217bb39:user/release-keys
-ro.system_dlkm.build.fingerprint=OnePlus/CPH2745IN/OP611FL1:17/CP2A.260605.016/B.R4T3.477a176-213f341-217bb39:user/release-keys
-ro.vendor_dlkm.build.fingerprint=OnePlus/CPH2745IN/OP611FL1:17/CP2A.260605.016/B.R4T3.477a176-213f341-217bb39:user/release-keys
-ro.odm_dlkm.build.fingerprint=OnePlus/CPH2745IN/OP611FL1:17/CP2A.260605.016/B.R4T3.477a176-213f341-217bb39:user/release-keys
+# Fingerprint fallback
+ro.build.fingerprint=OnePlus/CPH2747/OP611FL1:17/CP2A.260605.016/B.R4T3.55357f5-2eb9868-2eda512:user/release-keys
+ro.bootimage.build.fingerprint=OnePlus/CPH2747/OP611FL1:17/CP2A.260605.016/B.R4T3.55357f5-2eb9868-2eda512:user/release-keys
+ro.vendor.build.fingerprint=OnePlus/CPH2747/OP611FL1:17/CP2A.260605.016/B.R4T3.55357f5-2eb9868-2eda512:user/release-keys
+ro.odm.build.fingerprint=OnePlus/CPH2747/OP611FL1:17/CP2A.260605.016/B.R4T3.55357f5-2eb9868-2eda512:user/release-keys
+
 import /product/etc/infiniti/${ro.boot.prjname}/product.default.prop
 import /product/etc/infiniti/${ro.boot.prjname}/product.${ro.boot.hardware.revision}.prop
