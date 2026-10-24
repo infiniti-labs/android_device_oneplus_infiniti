@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: Apache-2.0
 #include <android-base/logging.h>
 #include <sys/system_properties.h>
+#include <unistd.h>
 #include <string>
 
 namespace {
@@ -21,17 +22,27 @@ constexpr Property kProperties[] = {
     {"ro.boot.vbmeta.size", "19776"},
     {"ro.boot.vbmeta.digest", "4f37f0cf8d94f052f2096c45c3e08c03e12b010d1c1ca7918b7a1bd45b4ef1b9"},
 };
+
+// Recovery and fastbootd gate flashing and adb on an orange verified boot state.
+constexpr Property kRecoveryProperties[] = {
+    {"ro.boot.verifiedbootstate", "orange"},
+};
+
+void Override(const Property& property) {
+    const auto* existing = __system_property_find(property.name);
+    const auto length = std::char_traits<char>::length(property.value);
+    const int result = existing
+            ? __system_property_update(const_cast<prop_info*>(existing), property.value, length)
+            : __system_property_add(property.name, std::char_traits<char>::length(property.name),
+                                    property.value, length);
+    if (result != 0) LOG(ERROR) << "infiniti: could not override " << property.name;
+}
 }  // namespace
 
 // Use the standard device init hook to override existing read-only properties.
 void vendor_load_properties() {
-    for (const auto& property : kProperties) {
-        const auto* existing = __system_property_find(property.name);
-        const auto length = std::char_traits<char>::length(property.value);
-        const int result = existing
-                ? __system_property_update(const_cast<prop_info*>(existing), property.value, length)
-                : __system_property_add(property.name, std::char_traits<char>::length(property.name),
-                                        property.value, length);
-        if (result != 0) LOG(ERROR) << "infiniti: could not override " << property.name;
+    for (const auto& property : kProperties) Override(property);
+    if (access("/system/bin/recovery", F_OK) == 0) {
+        for (const auto& property : kRecoveryProperties) Override(property);
     }
 }
