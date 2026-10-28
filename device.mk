@@ -47,6 +47,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     EuiccPolicyResTarget \
     FrameworksResEuicc \
+    Launcher3ResTarget \
     NfcResTarget \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
