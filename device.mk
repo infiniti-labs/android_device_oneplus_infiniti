@@ -5,6 +5,9 @@
 
 DEVICE_PATH := device/oneplus/infiniti
 
+# Remove packages
+PRODUCT_PACKAGES += RemovePackages
+
 # Updater
 PRODUCT_PACKAGES += Updater
 ifneq ($(IS_OFFICIAL),true)
