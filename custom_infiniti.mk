@@ -11,6 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/infiniti/device.mk)
 
 # Inherit some common PixelOS-CLO stuff.
+TARGET_INCLUDE_PIXEL_LAUNCHER := false
 TARGET_SUPPORTS_QUICK_TAP := false
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
