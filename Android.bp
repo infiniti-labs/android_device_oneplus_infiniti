@@ -1,2 +1,11 @@
 soong_namespace {
 }
+
+prebuilt_etc {
+    name: "RemovePackages",
+    src: "remove_packages",
+    installable: false,
+    overrides: [
+        "FilesPrebuilt",
+    ],
+}
