@@ -262,7 +262,7 @@
 
     <highBrightnessMode enabled="true">
         <transitionPoint>0.858539</transitionPoint>
-        <minimumHdrPercentOfScreen>0.1</minimumHdrPercentOfScreen>
+        <minimumHdrPercentOfScreen>0.0</minimumHdrPercentOfScreen>
 
         <sdrHdrRatioMap>
             <point>
@@ -293,8 +293,8 @@
         <brightnessDecreaseDebounceMillis>0</brightnessDecreaseDebounceMillis>
         <screenBrightnessRampIncrease>0.917993</screenBrightnessRampIncrease>
         <screenBrightnessRampDecrease>0.171359</screenBrightnessRampDecrease>
-        <minimumHdrPercentOfScreenForNbm>0.1</minimumHdrPercentOfScreenForNbm>
-        <minimumHdrPercentOfScreenForHbm>0.1</minimumHdrPercentOfScreenForHbm>
+        <minimumHdrPercentOfScreenForNbm>0.0</minimumHdrPercentOfScreenForNbm>
+        <minimumHdrPercentOfScreenForHbm>0.0</minimumHdrPercentOfScreenForHbm>
         <allowInLowPowerMode>false</allowInLowPowerMode>
     </hdrBrightnessConfig>
     <screenBrightnessRampFastDecrease>0.7047244</screenBrightnessRampFastDecrease>
