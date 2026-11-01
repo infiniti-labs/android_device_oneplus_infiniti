@@ -47,12 +47,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'(fdSupport += )TRUE;', r'\1FALSE;'),
     'odm/etc/init/init.camera_process.rc': blob_fixup()
         .regex_replace('    delete_recursion', '    #delete_recursion'),
-    (
-        'odm/etc/libnfc-mtp-SN220.conf_24831',
-        'odm/etc/libnfc-mtp-SN220.conf_24863',
-    ): blob_fixup()
-        .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
-        .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'odm/lib64/libEIS.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_acquire')
         .clear_symbol_version('AHardwareBuffer_allocate')
@@ -68,8 +62,6 @@ blob_fixups: blob_fixups_user_type = {
         .patch_file('blob-patches/libOplusSpatializerAidl.py'),
     'odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini': blob_fixup()
         .regex_replace(r'(wlm_latency_flags_ultralow =)0x180d83', r'\g<1>0x180c82'),
-    'vendor/etc/libnfc-nci.conf': blob_fixup()
-        .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml': blob_fixup()
         .regex_replace('<version>2</version>', '<version>3</version>'),
     'vendor/lib64/camera/components/com.qti.node.dewarp.so': blob_fixup()

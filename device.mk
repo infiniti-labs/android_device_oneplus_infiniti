@@ -43,6 +43,12 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
 
+# NFC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/nfc/libnfc-mtp-SN220.conf_24831:$(TARGET_COPY_OUT_ODM)/etc/libnfc-mtp-SN220.conf_24831 \
+    $(LOCAL_PATH)/configs/nfc/libnfc-mtp-SN220.conf_24863:$(TARGET_COPY_OUT_ODM)/etc/libnfc-mtp-SN220.conf_24863 \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay-custom

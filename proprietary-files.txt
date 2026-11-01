@@ -1028,9 +1028,6 @@ odm/lib64/libviltesr_ubwc.so
 odm/lib64/libwechatsr_ubwc.so
 
 # NFC
-odm/etc/nfc/libnfc-mtp-SN220.conf_24831:odm/etc/libnfc-mtp-SN220.conf_24831
-odm/etc/nfc/libnfc-mtp-SN220.conf_24863:odm/etc/libnfc-mtp-SN220.conf_24863
-odm/etc/nfc/libnfc-nci.conf_24863:vendor/etc/libnfc-nci.conf
 odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_45:vendor/firmware/sn220u.bin
 
 # Sensors configs
