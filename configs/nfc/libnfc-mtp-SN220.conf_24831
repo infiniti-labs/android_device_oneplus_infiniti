@@ -520,14 +520,13 @@ NXP_RF_CONF_BLK_12={
 }
 
 NXP_RF_CONF_BLK_13={
-	      20,   02,   82,   07,
+	      20, 02, 55, 06,
 	      A0,   AF,   09,   11,   79,   00,   24,   11,   79,   00,   24,   12,
 	      A0,   92,   28,   48,   00,   24,   00,   FC,   81,   0F,   00,   22,   80,   0F,   00,   14,   00,   20,   60,   EA,   01,   43,   18,   32,   16,   78,   30,   0D,   00,   03,   45,   EA,   05,   01,   04,   68,   02,   3F,   92,   04,   00,   0C,   13,
 	      A1,   2E,   03,   83,   83,   22,
 	      A0,   80,   02,   E8,   03,
 	      A0,   0D,   06,   62,   32,   AE,   00,   7F,   00,
 	      A0,   0D,   06,   67,   32,   AE,   00,   1F,   00,
-	      A0,   68,   2A,   06,   40,   60,   03,   19,   14,   00,   00,   00,   8A,   24,   00,   26,   02,   00,   0F,   FF,   7F,   00,   0F,   FF,   7F,   A0,   00,   03,   FA,   00,   00,   00,   4C,   00,   14,   00,   42,   00,   05,   1A,   00,   00,   03,   00,   03
 }
 
 NXP_RF_CONF_BLK_14={
@@ -570,7 +569,7 @@ NXP_RF_CONF_BLK_14={
 #add 2021-11-15:A1,   13,   01,   32 -- By default in FW it was set to 2ms, but we found out that it needs to be increased to 5ms (32=3*16+2)
 ##This config defines a guard time between Mailbox deactivation and activation that is needed to overcome a Race-condition in the JCOP Mailbox activation when a previous deactivation is not fully completed.
 #A1, 98, 01, 11 :use GPIO3 notify host about VBAT drop event
-NXP_CORE_CONF_EXTN={20, 02, 97, 11,
+NXP_CORE_CONF_EXTN={20, 02, C4, 12,
     A0, 09, 02, E8, 03,
     A1, 34, 01, 04,
     A0, 07, 01, 01,
@@ -587,7 +586,8 @@ NXP_CORE_CONF_EXTN={20, 02, 97, 11,
     A0, 28, 26, 03, 00, 00, 00, FB, 50, 00, 00, B0, FF, 00, A0, 00, 00, 60, FF, 00, F0, 00, 00, 10, FF, 00, 40, 01, 00, C0, FE, 00, D0, 01, 00, 08, 02, 00, F8, FD, 00,
     A1, 48, 0A, 01, 00, 04, 10, 03, 03, 4C, 04, C8, 00,
     A0, C4, 0F, 01, 5A, 00, 6E, 00, 1E, 00, 46, 00, 05, 0A, 02, 05, 01, 05,
-    A1, B5, 0C, 01, 03, 08, 0C, 03, 18, 32, 06, 78, 30, 6D, 00
+    A1, B5, 0C, 01, 03, 08, 0C, 03, 18, 32, 06, 78, 30, 6D, 00,
+    A0, 68, 2A, 06, 40, 60, 03, 19, 14, 00, 00, 00, 8A, 24, 00, C2, 01, 00, 0F, FF, 7F, 00, 0F, FF, 7F, A0, 00, 03, FA, 00, 00, 00, 4C, 00, 14, 00, 42, 00, 05, 1A, 00, 00, 03, 00, 03
 }
 #       A0, B8, 01, 01, //enable apdu logging
 #       A0, 1D, 01, 11, //enable L1 and L2 Lx_debug 
