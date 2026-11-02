@@ -1028,7 +1028,7 @@ odm/lib64/libviltesr_ubwc.so
 odm/lib64/libwechatsr_ubwc.so
 
 # NFC
-odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_45:vendor/firmware/sn220u.bin
+odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_47:vendor/firmware/sn220u.bin
 
 # Sensors configs
 my_product/etc/fusionlight_profile/fusionlight_Main_1_A.json:odm/etc/fusionlight_profile/fusionlight_Main_1_A.json
