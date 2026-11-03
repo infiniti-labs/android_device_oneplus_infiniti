@@ -45,6 +45,8 @@ blob_fixups: blob_fixups_user_type = {
         # Disable face detection AE behaviour
         .regex_replace(r'(enableSWfdForThirdCamUnit += )TRUE', r'\1FALSE')
         .regex_replace(r'(fdSupport += )TRUE;', r'\1FALSE;')
+        # The HAL's DFX dark screen detector crashes without the OPlus log core service
+        .regex_replace(r'(isSupportHalDFX += )TRUE', r'\1FALSE')
         # Map 120fps slow motion on the ultra wide to its 120fps sensor mode
         .regex_replace(r'( +)(infinitiultrawide\[0x0800\]\[-1\] += 5;.*\n)', r'\1\2\1infinitiultrawide[0x0400][-1]             = 4;\n'),
     'odm/etc/init/init.camera_process.rc': blob_fixup()
