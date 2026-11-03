@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml
+
 # NFC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-mtp-SN220.conf_24831:$(TARGET_COPY_OUT_ODM)/etc/libnfc-mtp-SN220.conf_24831 \
