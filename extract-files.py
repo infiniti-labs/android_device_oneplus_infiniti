@@ -73,12 +73,15 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('<version>2</version>', '<version>3</version>'),
     'vendor/lib64/camera/components/com.qti.node.dewarp.so': blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
+    'vendor/lib64/hw/camera.qcom.core.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so')
+        # Advertise OFF/ON only; preview stabilization distorts mixed-aspect streams.
+        .sig_replace('57 AD 06 B9 6A 02 40 F9 4B B1 06 B9 EB 8F 81 52', '56 AD 06 B9'),
     'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so': blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
         .replace_needed('vendor.qti.hardware.camera.offlinecamera-V2-ndk.so', 'vendor.qti.hardware.camera.offlinecamera-V3-ndk.so'),
     (
         'vendor/lib64/camera/components/com.qti.node.fd.so',
-        'vendor/lib64/hw/camera.qcom.core.so',
         'vendor/lib64/libcamxdumpinforecorder.so',
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
