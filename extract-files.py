@@ -60,8 +60,6 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
-    'odm/lib64/hw/camera.oemlayer.v2.so': blob_fixup()
-        .patch_file('blob-patches/camera.oemlayer.v2.py'),
     'odm/lib64/liboprec_audrec.so': blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'odm/lib64/soundfx/libOplusSpatializerAidl.so': blob_fixup()
