@@ -12,3 +12,5 @@ ro.surface_flinger.set_touch_timer_ms=200
 
 # USB
 vendor.usb.product_string=OnePlus 15
+
+persist.vendor.camera.oplus.enableLogging=true
