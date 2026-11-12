@@ -60,6 +60,9 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    'odm/lib64/libextensionlayer.so': blob_fixup()
+        # Let the session stabilization mode select video EIS for operation mode 0
+        .sig_replace('08 25 40 B9 C8 03 00 34', 'E8 3B 40 B9 C8 03 00 35'),
     'odm/lib64/liboprec_audrec.so': blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'odm/lib64/soundfx/libOplusSpatializerAidl.so': blob_fixup()
